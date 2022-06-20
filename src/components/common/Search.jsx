@@ -5,7 +5,7 @@ function Search() {
   const { onSelect } = useContext(CountriesContext);
 
   return (
-    <ul className="flex flex-wrap items-center justify-center gap-3 lg:flex-col">
+    <ul className="flex flex-wrap items-center justify-center gap-2 lg:flex-col">
       <li>
         <button
           onClick={() => {
