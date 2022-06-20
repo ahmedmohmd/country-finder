@@ -4,7 +4,7 @@ import styled from "../../styles/Country.module.scss";
 //* Country JSX
 function Country({ name, region, flage, people, cover, continent }) {
   return (
-    <div class="grow p-4 lg:w-1/2  xl:w-1/4">
+    <div class="grow py-4 sm:p-4 lg:w-1/2  xl:w-1/4">
       <div class="shadow hover:shadow-xl duration-500 h-full border-opacity-60 rounded-2xl overflow-hidden hover:-translate-y-1">
         <img
           class="lg:h-48 md:h-36 w-full object-cover object-center"
