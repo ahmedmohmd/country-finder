@@ -8,7 +8,7 @@ function Countries() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full gap-8 py-12">
-      <div className="flex items-center justify-start w-full px-5 ">
+      <div className="flex items-center justify-start w-full px-0 lg:px-5">
         <form
           onSubmit={handleSubmit}
           className="flex items-center justify-between gap-2 "
