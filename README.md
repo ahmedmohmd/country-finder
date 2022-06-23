@@ -48,4 +48,4 @@ Country Finder is Website that You can use it to Find and Know a lot of Informat
 
 # App's Screenshot
 
-<!-- ![SHortly Website Screenshot](https://github.com/ahmedmohmd/shortly/blob/main/app-screenshot.png?raw=true) -->
+![Country Finder Website Screenshot](https://github.com/ahmedmohmd/country-finder/blob/main/app-screenshot.png?raw=true)
