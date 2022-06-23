@@ -1,40 +1,46 @@
 //* Imports
-import styled from "../../styles/Country.module.scss";
+import { Link } from "react-router-dom";
 
 //* Country JSX
 function Country({ name, region, flage, people, cover, continent }) {
   return (
-    <div class="grow py-4 sm:p-4 lg:w-1/2  xl:w-1/4">
-      <div class="shadow hover:shadow-xl duration-500 h-full border-opacity-60 rounded-2xl overflow-hidden hover:-translate-y-1">
+    <div className="py-4 grow sm:p-4 lg:w-1/2 xl:w-1/4">
+      <div className="h-full overflow-hidden duration-500 shadow hover:shadow-xl border-opacity-60 rounded-2xl hover:-translate-y-1">
         <img
-          class="lg:h-48 md:h-36 w-full object-cover object-center"
+          className="object-cover object-center w-full lg:h-48 md:h-36"
           src={cover}
           alt="blog"
         />
-        <div class="p-6 bg-white dark:bg-elephant-dark">
-          <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+        <div className="p-6 bg-white dark:bg-elephant-dark">
+          <h2 className="mb-1 text-xs font-medium tracking-widest text-gray-400 title-font">
             {continent}
           </h2>
-          <h1 class="title-font text-lg font-bold text-gray-500 dark:text-slate-300 mb-3">
+          <Link
+            to={`/country/${name}`}
+            className="mb-3 text-lg font-bold text-gray-500 title-font dark:text-slate-300"
+          >
             {name}
-          </h1>
-          <div class="flex items-center flex-wrap ">
-            <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+          </Link>
+          <div className="flex flex-wrap items-center ">
+            <Link
+              to={`/country/${name}`}
+              className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0"
+            >
               Learn More
               <svg
-                class="w-4 h-4 ml-2"
+                className="w-4 h-4 ml-2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
-            </a>
-            <span class="text-gray-400 mr-3 inline-flex gap-2 items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200 dark:border-slate-500">
+            </Link>
+            <span className="inline-flex items-center gap-2 py-1 pr-3 ml-auto mr-3 text-sm leading-none text-gray-400 border-r-2 border-gray-200 lg:ml-auto md:ml-0 dark:border-slate-500">
               <svg
                 width="25px"
                 height="25px"
@@ -51,7 +57,7 @@ function Country({ name, region, flage, people, cover, continent }) {
                 {people}
               </span>
             </span>
-            <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+            <span className="inline-flex items-center text-sm leading-none text-gray-400">
               <span>{flage}</span>
             </span>
           </div>
@@ -62,11 +68,3 @@ function Country({ name, region, flage, people, cover, continent }) {
 }
 
 export default Country;
-
-/**
- * name: count.name.common
- * continent: count.region
- * flag: count.flag
- * cover: count.flags[1]
- * people: count.population
- */

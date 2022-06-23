@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import React, { useEffect, useState } from "react";
 import config from "./config/config.json";
 import useFetcher from "./utilities/fetcher";
+import CountryPage from "./components/CountryPage";
+import { ToastContainer, toast } from "react-toastify";
 
 const CountriesContext = React.createContext();
 
@@ -23,8 +25,6 @@ function App() {
     }
   }, [data]);
 
-  if (isError) return <div>Error!</div>;
-
   return (
     <Flowbite>
       <CountriesContext.Provider
@@ -33,15 +33,18 @@ function App() {
           onSelect: handleSelect,
           onSearch: handleSearch,
           isLoading,
+          isError,
         }}
       >
         <div className="flex flex-col min-h-screen lg:flex-row dark:bg-whale-dark bg-whale-light">
           <NavBar />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/country/:name" element={<CountryPage />} />
           </Routes>
         </div>
       </CountriesContext.Provider>
+      <ToastContainer />
     </Flowbite>
   );
 
@@ -61,7 +64,16 @@ function App() {
       if (filteredCountries.length > 0) {
         setCountries(filteredCountries);
       } else {
-        console.log("Not Found!");
+        toast.error("Sorry, Country Not Found!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       }
     } else {
       setCountries(copyCountries);

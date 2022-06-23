@@ -1,8 +1,4 @@
-import useFetcher from "../utilities/fetcher";
-import Search from "./common/Search";
-import config from "../config/config.json";
-import { useEffect, useState } from "react";
-import Country from "./common/Country";
+//* Imports
 import Countries from "./Countries";
 
 //* Home JSX
@@ -14,25 +10,6 @@ function Home() {
       </div>
     </div>
   );
-
-  // function handleSearch(searchText) {
-  //   const copyCountries = [...data];
-
-  //   if (searchText) {
-  //     const filteredCountries = [...countries].filter(
-  //       (country) =>
-  //         country.name.common.toLowerCase() === searchText.toLowerCase()
-  //     );
-
-  //     if (filteredCountries.length > 0) {
-  //       setCountries(filteredCountries);
-  //     } else {
-  //       console.log("Not Found!");
-  //     }
-  //   } else {
-  //     setCountries(copyCountries);
-  //   }
-  // }
 }
 
 export default Home;

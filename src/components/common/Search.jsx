@@ -1,18 +1,22 @@
-import { useContext, useState } from "react";
+//* Imports
+import { useContext } from "react";
 import { CountriesContext } from "../../App";
+import { Link } from "react-router-dom";
 
+//* Search JSX
 function Search() {
   const { onSelect } = useContext(CountriesContext);
 
   return (
     <ul className="flex flex-wrap items-center justify-center gap-2 lg:flex-col">
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("all");
           }}
           type="button"
-          class="mb-0 lg:mb-2 text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600  dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 mb-0 text-sm font-medium text-center text-gray-900 rounded-lg lg:mb-2 bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             width="35px"
@@ -21,7 +25,7 @@ function Search() {
             fill="#e3567d"
             x="0px"
             y="0px"
-            enable-background="new 0 0 52 52"
+            enableBackground="new 0 0 52 52"
           >
             <path
               d="M31.6,21.6c-1.2,0-2.2-1-2.2-2.2V5.5c0-1.2,1-2.2,2.2-2.2h14.2c1.2,0,2.2,1,2.2,2.2v13.9
@@ -37,15 +41,16 @@ function Search() {
 	l-7.1,4.1c-0.7,0.4-1.5,0.4-2.1,0l-7.2-4.1c-0.7-0.4-1.1-1.1-1.1-1.9V8.4C3.7,7.6,4.1,6.9,4.8,6.5z"
             />
           </svg>
-        </button>
+        </Link>
       </li>
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("region/africa");
           }}
           type="button"
-          class="text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600   dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 text-sm font-medium text-center text-gray-900 rounded-lg bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             version="1.1"
@@ -56,7 +61,7 @@ function Search() {
             width="25px"
             height="25px"
             viewBox="0 0 260 259"
-            enable-background="new 0 0 260 259"
+            enableBackground="new 0 0 260 259"
           >
             <polygon
               points="256.64,73.218 245.26,70.737 227.247,56.851 198.115,54.537 194.251,47.498 171.156,39.172 159.257,38.146 
@@ -69,15 +74,16 @@ function Search() {
 	214.864,181.511 223.716,169.582 230.921,145.723 230.921,128.76 235.74,126.088 258,99.533 "
             />
           </svg>
-        </button>
+        </Link>
       </li>
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("region/asia");
           }}
           type="button"
-          class="text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600   dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 text-sm font-medium text-center text-gray-900 rounded-lg bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             version="1.1"
@@ -88,7 +94,7 @@ function Search() {
             width="25px"
             height="25px"
             viewBox="0 0 260 259"
-            enable-background="new 0 0 260 259"
+            enableBackground="new 0 0 260 259"
           >
             <polygon
               points="256.64,73.218 245.26,70.737 227.247,56.851 198.115,54.537 194.251,47.498 171.156,39.172 159.257,38.146 
@@ -101,15 +107,16 @@ function Search() {
 	214.864,181.511 223.716,169.582 230.921,145.723 230.921,128.76 235.74,126.088 258,99.533 "
             />
           </svg>
-        </button>
+        </Link>
       </li>
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("region/europe");
           }}
           type="button"
-          class="text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600   dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 text-sm font-medium text-center text-gray-900 rounded-lg bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             version="1.1"
@@ -120,7 +127,7 @@ function Search() {
             width="25px"
             height="25px"
             viewBox="0 0 260 259"
-            enable-background="new 0 0 260 259"
+            enableBackground="new 0 0 260 259"
           >
             <polygon
               points="256.64,73.218 245.26,70.737 227.247,56.851 198.115,54.537 194.251,47.498 171.156,39.172 159.257,38.146 
@@ -133,15 +140,16 @@ function Search() {
 	214.864,181.511 223.716,169.582 230.921,145.723 230.921,128.76 235.74,126.088 258,99.533 "
             />
           </svg>
-        </button>
+        </Link>
       </li>
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("region/oceania");
           }}
           type="button"
-          class="text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600   dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 text-sm font-medium text-center text-gray-900 rounded-lg bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             version="1.1"
@@ -152,7 +160,7 @@ function Search() {
             width="25px"
             height="25px"
             viewBox="0 0 260 259"
-            enable-background="new 0 0 260 259"
+            enableBackground="new 0 0 260 259"
           >
             <polygon
               points="256.64,73.218 245.26,70.737 227.247,56.851 198.115,54.537 194.251,47.498 171.156,39.172 159.257,38.146 
@@ -165,15 +173,16 @@ function Search() {
 	214.864,181.511 223.716,169.582 230.921,145.723 230.921,128.76 235.74,126.088 258,99.533 "
             />
           </svg>
-        </button>
+        </Link>
       </li>
       <li>
-        <button
+        <Link
+          to="/"
           onClick={() => {
             onSelect("region/america");
           }}
           type="button"
-          class="text-gray-900 bg-translate hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-1 py-1 lg:px-3 lg:py-3 text-center inline-flex items-center dark:focus:ring-gray-600   dark:text-white dark:hover:bg-gray-700 gap-3"
+          className="inline-flex items-center gap-3 px-1 py-1 text-sm font-medium text-center text-gray-900 rounded-lg bg-translate hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 lg:px-3 lg:py-3 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700"
         >
           <svg
             version="1.1"
@@ -184,7 +193,7 @@ function Search() {
             width="25px"
             height="25px"
             viewBox="0 0 260 259"
-            enable-background="new 0 0 260 259"
+            enableBackground="new 0 0 260 259"
           >
             <polygon
               points="256.64,73.218 245.26,70.737 227.247,56.851 198.115,54.537 194.251,47.498 171.156,39.172 159.257,38.146 
@@ -197,7 +206,7 @@ function Search() {
 	214.864,181.511 223.716,169.582 230.921,145.723 230.921,128.76 235.74,126.088 258,99.533 "
             />
           </svg>
-        </button>
+        </Link>
       </li>
     </ul>
   );
